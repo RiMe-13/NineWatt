@@ -22,14 +22,14 @@ mask_rcnn_R_50_FPN_3x.yaml
 - CoCo형식 데이터셋
 - 데이터 셋 폴더 구조
 '''
-/home/work/kimjongjip/solar
-├── train
-│ ├── annotations.coco.json
-│ ├── images
-│ │ ├── 000000000000.jpg
-│ │ ├── 000000000001.jpg
-│ │ └── ...
-├── valid
+/home/work/kimjongjip/solar  
+├── train  
+│ ├── annotations.coco.json  
+│ ├── images  
+│ │ ├── 000000000000.jpg  
+│ │ ├── 000000000001.jpg  
+│ │ └── ...  
+├── valid  
 └── test
 '''
 
