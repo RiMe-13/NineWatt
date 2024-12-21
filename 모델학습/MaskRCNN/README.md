@@ -14,14 +14,14 @@ python -m pip install 'git+https://github.com/facebookresearch/detectron2.git'
 - numpy 1.22.3
 
 ## 사용 모델
-'''
+```
 mask_rcnn_R_50_FPN_3x.yaml
-'''
+```
 
 ## 데이터셋 
 - CoCo형식 데이터셋
 - 데이터 셋 폴더 구조
-'''
+```
 /home/work/kimjongjip/solar  
 ├── train  
 │ ├── annotations.coco.json  
@@ -31,16 +31,16 @@ mask_rcnn_R_50_FPN_3x.yaml
 │ │ └── ...  
 ├── valid  
 └── test
-'''
+```
 
 ## 학습 및 검증
-'''
+```
 python train_level.py
 python test_new.py
-'''
+```
 
 ## 마스크 생성
-'''
+```
 python mask_generate.py
-'''
+```
 
