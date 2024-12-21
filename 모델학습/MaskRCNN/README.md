@@ -24,13 +24,13 @@ mask_rcnn_R_50_FPN_3x.yaml
 '''
 /home/work/kimjongjip/solar  
 ├── train  
-│   ├── _annotations.coco.json  
-│   ├── images  
-│   │   ├── 000000000000.jpg  
-│   │   ├── 000000000001.jpg  
-│   │   ├── ...  
+│ ├── annotations.coco.json  
+│ ├── images  
+│ │ ├── 000000000000.jpg  
+│ │ ├── 000000000001.jpg  
+│ │ └── ...  
 ├── valid  
-├── test  
+└── test  
 '''
 
 ## 학습 및 검증
