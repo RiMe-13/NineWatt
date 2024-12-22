@@ -18,7 +18,7 @@ def download_image(id, zoom_lev, original_base64, bbox_base64):
 def get_images(id):
     # PostgreSQL에 연결
     conn = psycopg2.connect(
-        host="greenplannerdb.co9wquvnfbh3.ap-northeast-2.rds.amazonaws.com",
+        host="your_host",
         database="vertiport",
         user="ninewattdev",
         password="your_password"
