@@ -53,12 +53,12 @@ Ninewatt/데모/
 ├── calculate_circle.py  
 ├── demo.py  
 ├── get_image.py  
-├── mask_generate.py  
+├── mask_generate.py  (maskRCNN)
 ├── model_final.pth  
-├── sam_segment.py  
+├── sam_segment.py  (SAM)
 ├── sam_vit_l_0b3195.pth  
 ├── get_image.py  
-└── yolo_mask_generate.py
+└── yolo_mask_generate.py (YoloV8)
 ```
 
 ## 데모 실행
