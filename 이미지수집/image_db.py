@@ -8,7 +8,7 @@ def update_zoom_level(id, zoom_lev):
         host="greenplannerdb.co9wquvnfbh3.ap-northeast-2.rds.amazonaws.com",
         database="vertiport",
         user="ninewattdev",
-        password="vtp1qazXSW@"
+        password="your_password"
     )
 
     cur = conn.cursor()
@@ -37,7 +37,7 @@ def update_image_url(id, bbox_url, original_url):
         host="greenplannerdb.co9wquvnfbh3.ap-northeast-2.rds.amazonaws.com",
         database="vertiport",
         user="ninewattdev",
-        password="vtp1qazXSW@"
+        password="your_password"
     )
 
     cur = conn.cursor()
@@ -66,7 +66,7 @@ def update_image_base64(id, bbox_base64, original_base64):
         host="greenplannerdb.co9wquvnfbh3.ap-northeast-2.rds.amazonaws.com",
         database="vertiport",
         user="ninewattdev",
-        password="vtp1qazXSW@"
+        password="your_password"
     )
 
     cur = conn.cursor()
@@ -116,8 +116,8 @@ def download_image(id, lev, width, height, x1, y1, x2, y2, x3, y3, x4, y4, cente
     os.makedirs(original_dir, exist_ok=True)
 
     # API URL 생성
-    api_url = f"https://maps.googleapis.com/maps/api/staticmap?zoom={zoom_lev}&size=640x640&maptype=satellite&path=color:0xff0000ff|weight:5|{y1},{x1}|{y2},{x2}|{y3},{x3}|{y4},{x4}|{y1},{x1}&key=AIzaSyAKirLGwgjFBjzNMjvLMt8r4-m2jxH7T2Q"
-    api_url2 = f"https://maps.googleapis.com/maps/api/staticmap?center={center_y},{center_x}&zoom={zoom_lev}&size=640x640&maptype=satellite&key=AIzaSyAKirLGwgjFBjzNMjvLMt8r4-m2jxH7T2Q"
+    api_url = f"https://maps.googleapis.com/maps/api/staticmap?zoom={zoom_lev}&size=640x640&maptype=satellite&path=color:0xff0000ff|weight:5|{y1},{x1}|{y2},{x2}|{y3},{x3}|{y4},{x4}|{y1},{x1}&key=YOUR_API_KEY"
+    api_url2 = f"https://maps.googleapis.com/maps/api/staticmap?center={center_y},{center_x}&zoom={zoom_lev}&size=640x640&maptype=satellite&key=YOUR_API_KEY"
     
     # update_image_url(id, api_url, api_url2)
     

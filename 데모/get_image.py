@@ -21,7 +21,7 @@ def get_images(id):
         host="greenplannerdb.co9wquvnfbh3.ap-northeast-2.rds.amazonaws.com",
         database="vertiport",
         user="ninewattdev",
-        password="vtp1qazXSW@"
+        password="your_password"
     )
 
     # 커서 생성

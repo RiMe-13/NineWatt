@@ -17,6 +17,11 @@ pip install opencv-python-headless matplotlib numpy
 pip install gradio pillow ultralytics
 ```
 
+### DB 비밀번호 변경경
+```
+your_password -> DB 비밀번호
+```
+
 ## 사용 버전
 - Python 3.10.12
 - detectron2 0.6

@@ -18,6 +18,12 @@
 현재 DB 내 verti_demo 테이블에 후보지 별 건물 위성 사진 저장 완료
 ```
 
+## DB 비밀번호 및 API Key 변경
+```
+YOUR_API_KEY -> Google Maps API Key 입력
+your_password -> DB 비밀번호 입력
+```
+
 ## 실행 방법
 ```
 python3 image_db.py

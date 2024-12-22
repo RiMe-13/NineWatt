@@ -13,7 +13,7 @@ from calculate_circle import find_max_circle, draw_circle_on_original_image, bri
 def get_db_connection():
     return psycopg2.connect(
         user="ninewattdev",
-        password="vtp1qazXSW@",
+        password="your_password",
         host="greenplannerdb.co9wquvnfbh3.ap-northeast-2.rds.amazonaws.com",
         port="5432",
         database="vertiport"
