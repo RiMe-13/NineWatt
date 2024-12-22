@@ -14,7 +14,7 @@ def get_db_connection():
     return psycopg2.connect(
         user="ninewattdev",
         password="your_password",
-        host="greenplannerdb.co9wquvnfbh3.ap-northeast-2.rds.amazonaws.com",
+        host="your_host",
         port="5432",
         database="vertiport"
     )
