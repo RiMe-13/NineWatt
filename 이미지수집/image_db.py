@@ -5,7 +5,7 @@ import base64
 
 def update_zoom_level(id, zoom_lev):
     conn = psycopg2.connect(
-        host="greenplannerdb.co9wquvnfbh3.ap-northeast-2.rds.amazonaws.com",
+        host="your_host",
         database="vertiport",
         user="ninewattdev",
         password="your_password"
