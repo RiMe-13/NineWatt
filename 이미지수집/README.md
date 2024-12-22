@@ -20,6 +20,7 @@
 
 ## DB 비밀번호 및 API Key 변경
 ```
+your_host -> DB 호스트 입력
 YOUR_API_KEY -> Google Maps API Key 입력
 your_password -> DB 비밀번호 입력
 ```
