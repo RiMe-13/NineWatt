@@ -46,6 +46,6 @@ python mask_generate.py
 
 ## Reference
 ``` 
-- https://github.com/facebookresearch/detectron2
-- Kaming He, Georgia Gkioxari, Piotr Doll´ar, Ross Girshick. Mask R-CNN. n.p.: Facebook AI Research (FAIR), 2017.
+https://github.com/facebookresearch/detectron2
+Kaming He, Georgia Gkioxari, Piotr Doll´ar, Ross Girshick. Mask R-CNN. n.p.: Facebook AI Research (FAIR), 2017.
 ```
