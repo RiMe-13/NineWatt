@@ -5,6 +5,7 @@ from roboflow import Roboflow
 import os
 
 rf = Roboflow(api_key="W8Wh3vwPre13GJ9ArQue") # roboflow api 키로 데이터 셋 다운로드
+
 project = rf.workspace("brad-dwyer").project("car-parts-pgo19")
 version = project.version(6)
 dataset = version.download("sam2")
@@ -19,8 +20,6 @@ os.rename(dataset.location, "/content/data")
 
 !pip install -e .[dev] -q
 !cd ./checkpoints && ./download_ckpts.sh
-# Script to rename roboflow filenames to something SAM 2.1 compatible.
-# Maybe it is possible to remove this step tweaking sam2/sam2/configs/train.yaml.
 import os
 import re
 
@@ -54,8 +53,6 @@ import random
 from PIL import Image
 import numpy as np
 
-# use bfloat16 for the entire notebook
-# from Meta notebook
 torch.autocast("cuda", dtype=torch.bfloat16).__enter__()
 if torch.cuda.get_device_properties(0).major >= 8:
     torch.backends.cuda.matmul.allow_tf32 = True
@@ -73,7 +70,6 @@ mask_generator_base = SAM2AutomaticMaskGenerator(sam2_base)
 
 validation_set = os.listdir("/content/data/valid")
 
-# choose random with .json extension
 image = random.choice([img for img in validation_set if img.endswith(".jpg")])
 image = os.path.join("/content/data/valid", image)
 opened_image = np.array(Image.open(image).convert("RGB"))
