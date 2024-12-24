@@ -1,29 +1,33 @@
 # Demo
-
+DB에 저장되어 있는 건물 이미지를 불러와, SAM을 통한 건물 분할 및 YOLOv8seg를 통한 가용 공간 추출, 최종 버티포트 수용성 판단을 진행하는 통합 데모 디렉토리입니다.
 ## 환경 설정
-### 모델 가중치 다운로드
+### 1. 모델 가중치 다운로드
 - [Google Drive](https://drive.google.com/file/d/1fNrkIfhOnGlnAF9g11uj0PHbQ1rkxtxc/view?usp=drive_link)
 
-### detectron2, SAM 설치
+### 2. detectron2, SAM 설치
 ```
 pip install git+https://github.com/facebookresearch/segment-anything.git
 pip install git+https://github.com/facebookresearch/detectron2.git
 ```
 
-### 필요 라이브러리 설치
+### 3. 필요 라이브러리 설치
 ```
 pip install torch torchvision torchaudio
 pip install opencv-python-headless matplotlib numpy
 pip install gradio pillow ultralytics
 ```
 
-### DB 비밀번호 변경경
+### 4. DB 정보 변경
 ```
-your_password -> DB 비밀번호
+your_host -> DB 호스트 입력
+your_password -> DB 비밀번호 입력
 ```
 
-## 사용 버전
+## 개발 환경
+- Ubuntu 22.04 LTS (WSL 2 활용)
 - Python 3.10.12
+
+## 라이브러리 사용 버전
 - detectron2 0.6
 - SAM 1
 - YOLOv8seg
@@ -53,18 +57,26 @@ Ninewatt/데모/
 ├── calculate_circle.py  
 ├── demo.py  
 ├── get_image.py  
-├── mask_generate.py  (maskRCNN)
+├── mask_generate.py  (maskRCNN 가용공간 추출)
 ├── model_final.pth  
-├── sam_segment.py  (SAM)
+├── sam_segment.py  (SAM 건물 분할)
 ├── sam_vit_l_0b3195.pth  
 ├── get_image.py  
-└── yolo_mask_generate.py (YoloV8)
+└── yolo_mask_generate.py (YOLOv8seg 가용공간 추출)
 ```
 
 ## 데모 실행
 ```
 python3 demo.py
 ```
+
+## 주요 파일 설명
+- demo.py : 데모 사이트 실행
+- get_image.py : DB에서 이미지 불러오기
+- sam_segment.py : SAM을 통한 건물 분할
+- yolo_mask_generate.py : YOLOv8seg 모델 통한 가용 공간 마스크 추출
+- mask_generate.py : maskRCNN 모델 통한 가용 공간 마스크 추출 (현재 미사용)
+- calculate_circle.py : 마스크 내 최대 원 계산
 
 ## Reference
 - [Detectron2](https://github.com/facebookresearch/detectron2)
