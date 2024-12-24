@@ -75,7 +75,7 @@ python3 demo.py
 - get_image.py : DB에서 이미지 불러오기
 - sam_segment.py : SAM을 통한 건물 분할
 - yolo_mask_generate.py : YOLOv8seg 모델 통한 가용 공간 마스크 추출
-- mask_generate.py : maskRCNN 모델 통한 가용 공간 마스크 추출 (현재 미사용)
+- maskrcnn_mask_generate.py : maskRCNN 모델 통한 가용 공간 마스크 추출 (현재 미사용)
 - calculate_circle.py : 마스크 내 최대 원 계산
 
 ## Reference
