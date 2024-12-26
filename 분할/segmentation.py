@@ -22,7 +22,7 @@ base_dir = Path("imagetestfinal_unzipped/")
 # 각 구 폴더 탐색
 for gu_folder in base_dir.iterdir():
     print(gu_folder.name)
-    if gu_folder.name != "강서구" or not gu_folder.is_dir():
+    if not gu_folder.is_dir():
         continue
 
     bbox_dir = gu_folder / "bbox"
