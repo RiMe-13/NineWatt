@@ -55,7 +55,7 @@ datasets/
 ```
 + .yaml 파일 예시
 
-.yaml 파일에는 클래스 종류와 개수, 훈련/검증/테스트 셋 경로가 포함되어있어야 합니다. 예시는 아래 이미지와 같습니다. 
+    .yaml 파일에는 클래스 종류와 개수, 훈련/검증/테스트 셋 경로가 포함되어있어야 합니다. 예시는 아래 이미지와 같습니다. 
 
 
 ![image](https://github.com/user-attachments/assets/fa3d2426-7334-4244-a93a-2d901b8f5b07)
@@ -125,7 +125,11 @@ patience 를 설정하지 않아도 yolo에는 기본적으로 10 에폭으로 �
 ![image](https://github.com/user-attachments/assets/37519db3-f345-4ec2-9765-2f46af39f579)
 
 훈련이 완료되면 runs/ 폴더가 생성되며, runs/segment/내가지정한 모델명 폴더에 아래와 같은 가중치 파일과 훈련 결과 파일들이 저장됩니다.
-  
+
+weights 폴더에는 훈련완료된 가중치 파일들이 있습니다. 이중 best.pt파일이 가장 잘 훈련된 가중치 파일입니다.
+
+confusion_matrix, Box_curve, results, Mask_curve 파일들을 통해 훈련 결과 성능을 볼 수 있습니다. 이 파일들은 validation 과 train 관련 수치들입니다.
+
 ![image](https://github.com/user-attachments/assets/cff6c53b-4108-4a20-ab4d-8852139af38c)
 
 
@@ -133,7 +137,11 @@ patience 를 설정하지 않아도 yolo에는 기본적으로 10 에폭으로 �
 ---------------
 ## 테스트 코드
 
-테스트 할 수 있는 YOLO 명령어입니다. mode=val 고정이며, **split=test** 만 지정해주면 됩니다. model= 에는 모델 경로,  data=에는 .yaml 파일 경로가 필요합니다.
+    훈련이 완료되었다면 test 데이터셋을 통해 모델의 성능을 더 객관적으로 평가할 수 있습니다. 
+
+    아래는 테스트 할 수 있는 YOLO 명령어입니다. mode=val 고정이며, **split=test** 만 지정해주면 됩니다. model= 에는 훈련결과 나온 .pt 가중치 파일 경로,  data=에는 .yaml 파일 경로가 필요합니다.
+
+
 ```
 !yolo task=segment mode=val model=/home/work/ninewatt/runs/segment/학습결과저장된폴더/weights/best.pt data=/home/work/ninewatt/datasets/together_no_roof/data.yaml split=test
 ```
