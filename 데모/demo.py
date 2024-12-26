@@ -5,7 +5,6 @@ import numpy as np
 import math
 from get_image import get_images  # 이미지 가져오기 함수 가져오기
 from sam_segment import segment_image  # SAM 분할 함수 가져오기
-from mask_generate import process_single_image  # 마스크 생성 함수 가져오기
 from yolo_mask_generate import process_image_yolo  # YOLO 마스크 생성 함수 가져오기
 from calculate_circle import find_max_circle, draw_circle_on_original_image, bring_evtol  # 최대 원 계산 함수 가져오기
 
