@@ -32,3 +32,9 @@ vit_h 모델 가중치가 가장 무겁고 정확도가 높은 것으로 알려�
 ```
 !wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_l_0b3195.pth
 ```
+
+## segmentation.py 설명
+
+행정구 별로 폴더가 나눠져 있다는 가정하에 각 행정구 폴더 별로 순회하며 분할을 진행합니다.
+
+먼저 이미지이름_bbox.jpg 와 같이 _bbox.jpg로 끝나는 이미지들을 순회하며 원본 이미지인 이미지이름.jpg를 찾습니다. bbox.jpg 이미지에서 cv2라이블러리를 통해 빨간색 박스를 감지합니다. 그 후, SAM 모델에 해당 박스값과 원본 jpg파일을 넘겨주어 분할을 진행합니다. 그 후 plt를 통해 시각화를 진행합니다. 
