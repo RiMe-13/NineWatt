@@ -1,5 +1,14 @@
 # Demo
-DB에 저장되어 있는 건물 이미지를 불러와, SAM을 통한 건물 분할 및 YOLOv8seg를 통한 가용 공간 추출, 최종 버티포트 수용성 판단을 진행하는 통합 데모 디렉토리입니다.
+DB에 저장되어 있는 건물 이미지를 불러와, SAM을 통한 건물 분할 및 YOLOv8seg를 통한 가용 공간 추출, 최종 버티포트 수용성 판단을 진행하는 통합 데모의 코드가 포함된 디렉토리입니다.
+
+## 예시 실행 화면
+![데모 실행 예시](../images/demo.gif)
+1. Drop-Down 메뉴를 통해 후보지 건물의 id를 보여주고, 건물 id 클릭 시 건물 이미지를 가져옵니다.
+2. 건물 분할 버튼을 통해 건물 분할을 수행합니다.
+3. 가용 공간 버튼을 통해 가용 공간 마스크를 생성합니다. 헬리패드가 있을 경우 헬리패드 사용이 가능하다고 표시해주고, 가용 공간이 없는 경우 버티포트 설치가 불가하다고 표시합니다.
+4. 최대 원 계산 버튼으로 마스크 내 최대 넓이의 원을 계산합니다.
+5. 최종적으로 원의 지름과 건물의 메타데이터를 통해 버티포트 수용성을 판단합니다.
+
 ## 환경 설정
 ### 1. 모델 가중치 다운로드
 - [Google Drive](https://drive.google.com/file/d/1fNrkIfhOnGlnAF9g11uj0PHbQ1rkxtxc/view?usp=drive_link)
@@ -57,7 +66,7 @@ Ninewatt/데모/
 ├── calculate_circle.py  
 ├── demo.py  
 ├── get_image.py  
-├── mask_generate.py  (maskRCNN 가용공간 추출)
+├── maskrcnn_mask_generate.py  (maskRCNN 가용공간 추출)
 ├── model_final.pth  
 ├── sam_segment.py  (SAM 건물 분할)
 ├── sam_vit_l_0b3195.pth  
