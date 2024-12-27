@@ -59,7 +59,7 @@ model_final.pth (Mask-RCNN)
 
 ## 최종 디렉토리 구조 
 ```
-Ninewatt/데모/  
+NineWatt/데모/  
 ├── images  
 │ ├── evtol.png  
 ├── best.pt    
