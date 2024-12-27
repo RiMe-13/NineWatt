@@ -52,8 +52,10 @@ python mask_generate.py
 ```
 
 ## 마스크 생성 결과
-![마스크생성결과](../../images/maskrcnn.png)
-![마스크생성결과](../../images/maskrcnn_2.png)
+<div style="display: flex; justify-content: space-between;">
+    <img src="../../images/maskrcnn.png" width="400" alt="마스크생성결과1">
+    <img src="../../images/maskrcnn_2.png" width="400" alt="마스크생성결과2">
+</div>
 
 ## Reference
 ``` 
