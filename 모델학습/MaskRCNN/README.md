@@ -22,21 +22,28 @@ mask_rcnn_R_50_FPN_3x.yaml
 - CoCo형식 데이터셋
 - 데이터 셋 폴더 구조
 ```
-/home/work/kimjongjip/solar  
+/image_dataset
 ├── train  
-│ ├── annotations.coco.json  
-│ ├── images  
-│ │ ├── 000000000000.jpg  
-│ │ ├── 000000000001.jpg  
-│ │ └── ...  
+│ ├── annotations.coco.json    
+│ ├── 000000000000.jpg  
+│ ├── 000000000001.jpg  
+│ └── ...  
 ├── valid  
-└── test
+│ ├── annotations.coco.json    
+│ ├── 000000000000.jpg  
+│ ├── 000000000001.jpg  
+│ └── ...  
+├── test
+│ ├── annotations.coco.json    
+│ ├── 000000000000.jpg  
+│ ├── 000000000001.jpg  
+│ └── ...  
 ```
 
 ## 학습 및 검증
 ```
-python train_level.py
-python test_new.py
+python train_level.py # 학습
+python test_new.py # 검증 및 confusion matrix 계산
 ```
 
 ## 마스크 생성

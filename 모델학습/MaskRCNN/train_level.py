@@ -205,7 +205,7 @@ def get_stage_config(stage):
    }
    return configs[stage]
 
-def train_model(base_dir="/home/work/kimjongjip/solar"):
+def train_model(base_dir="/image_dataset"):
     # 데이터셋 등록
     for split in ['train', 'valid', 'test']:
         json_file = os.path.join(base_dir, split, '_annotations.coco.json')

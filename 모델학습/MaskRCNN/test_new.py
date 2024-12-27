@@ -298,94 +298,10 @@ if __name__ == "__main__":
     setup_logger()
 
     # 경로 설정
-    base_dir = "/home/work/kimjongjip/solar"  # 데이터셋 경로
-    weights_path = "/home/work/kimjongjip/output/solar_detection_20241127_010750/model_final.pth"  # 모델 가중치 경로
+    base_dir = "/image_dataset"  # 데이터셋 경로
+    weights_path = "/your_path/your_model.pth"  # 모델 가중치 경로
 
     # 테스트 실행
     results, conf_matrix = run_test(base_dir, weights_path, num_images=77)
-
-if __name__ == "__main__":
-    # 로그 설정
-    from detectron2.utils.logger import setup_logger
-    setup_logger()
-
-    # 경로 설정
-    base_dir = "/home/work/kimjongjip/solar"  # 데이터셋 경로
-    weights_path = "/home/work/kimjongjip/output/solar_detection_20241127_020253/model_stage_1_best.pth"  # 모델 가중치 경로
-
-    # 테스트 실행
-    results, conf_matrix = run_test(base_dir, weights_path, num_images=77)
-
-if __name__ == "__main__":
-    # 로그 설정
-    from detectron2.utils.logger import setup_logger
-    setup_logger()
-
-    # 경로 설정
-    base_dir = "/home/work/kimjongjip/solar"  # 데이터셋 경로
-    weights_path = "/home/work/kimjongjip/output/solar_detection_20241126_185607/model_final.pth"  # 모델 가중치 경로
-
-    # 테스트 실행
-    results, conf_matrix = run_test(base_dir, weights_path, num_images=7)
-
-if __name__ == "__main__":
-    # 로그 설정
-    from detectron2.utils.logger import setup_logger
-    setup_logger()
-
-    # 경로 설정
-    base_dir = "/home/work/kimjongjip/solar"  # 데이터셋 경로
-    weights_path = "/home/work/kimjongjip/output/solar_detection_20241124_083717/model_final.pth"  # 모델 가중치 경로
-
-    # 테스트 실행
-    results, conf_matrix = run_test(base_dir, weights_path, num_images=7)
-
-if __name__ == "__main__":
-    # 로그 설정
-    from detectron2.utils.logger import setup_logger
-    setup_logger()
-
-    # 경로 설정
-    base_dir = "/home/work/kimjongjip/solar"  # 데이터셋 경로
-    weights_path = "/home/work/kimjongjip/output/solar_detection_20241120_015622/model_stage_0_best.pth"  # 모델 가중치 경로
-
-    # 테스트 실행
-    results, conf_matrix = run_test(base_dir, weights_path, num_images=7)
-
-if __name__ == "__main__":
-    # 로그 설정
-    from detectron2.utils.logger import setup_logger
-    setup_logger()
-
-    # 경로 설정
-    base_dir = "/home/work/kimjongjip/solar"  # 데이터셋 경로
-    weights_path = "/home/work/kimjongjip/output/solar_detection_20241120_015622/model_final.pth"  # 모델 가중치 경로
-
-    # 테스트 실행
-    results, conf_matrix = run_test(base_dir, weights_path, num_images=7)
-
-if __name__ == "__main__":
-    # 로그 설정
-    from detectron2.utils.logger import setup_logger
-    setup_logger()
-
-    # 경로 설정
-    base_dir = "/home/work/kimjongjip/solar"  # 데이터셋 경로
-    weights_path = "/home/work/kimjongjip/output/solar_detection_20241120_032614/model_stage_2_best.pth"  # 모델 가중치 경로
-
-    # 테스트 실행
-    results, conf_matrix = run_test(base_dir, weights_path, num_images=7)
-
-if __name__ == "__main__":
-    # 로그 설정
-    from detectron2.utils.logger import setup_logger
-    setup_logger()
-
-    # 경로 설정
-    base_dir = "/home/work/kimjongjip/solar"  # 데이터셋 경로
-    weights_path = "/home/work/kimjongjip/output/solar_detection_20241120_042338/model_final.pth"  # 모델 가중치 경로
-
-    # 테스트 실행
-    results, conf_matrix = run_test(base_dir, weights_path, num_images=7)
 
 
