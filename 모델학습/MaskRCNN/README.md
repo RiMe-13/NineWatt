@@ -51,6 +51,10 @@ python test_new.py # 검증 및 confusion matrix 계산
 python mask_generate.py
 ```
 
+## 마스크 생성 결과
+![마스크생성결과](./images/maskrcnn.png)
+![마스크생성결과](./images/maskrcnn_2.png)
+
 ## Reference
 ``` 
 https://github.com/facebookresearch/detectron2
