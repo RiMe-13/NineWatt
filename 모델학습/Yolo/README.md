@@ -155,6 +155,8 @@ model.train(
 !yolo task=segment mode=val model=./runs/segment/학습결과저장된폴더/weights/best.pt data=./datasets/together_no_roof/data.yaml split=test
 ```
 
+
+(결과 이미지 예시입니다.)
 ![image](https://github.com/user-attachments/assets/cc4532d0-e40f-492c-b918-783949841988)
 
   테스트 완료시 위와 같은 수치들과 함께 runs/segment/val 폴더에 테스트 결과가 저장됩니다. mode=val 고정이어서 val로 폴더명이 잡히는 것이니, 테스트 데이터 결과로 보시면 됩니다.
