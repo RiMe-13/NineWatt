@@ -4,11 +4,20 @@
 
 현 폴더에서는 데모 버전과는 별도로 초기 환경 설정에서부터 훈련 및 테스트와 관련하여 설명합니다.
 
-훈련 데이터셋은 미리 구축되어 있다고 가정합니다. 
+데이터셋 구축시 Roboflow를 통해서 데이터셋을 쉽게 구축할 수 있습니다. - 예 https://universe.roboflow.com/rooftop1/-together
 
-https://universe.roboflow.com/rooftop1/-together
+위 링크를 통해 다운 받을 수 있습니다.
+![image](https://github.com/user-attachments/assets/c854c6eb-b3ad-400f-957e-5b026ec27477)
 
-위 링크는 직접 구축한 데이터셋 예입니다. 품질이 더 좋은 분할 이미지를 갖고 roboflow에서 레이블링 하면 쉽게 yolov8 데이터셋을 구축하실 수 있습니다.
+YOLOv8 선택 -> .zip 파일 다운
+![image](https://github.com/user-attachments/assets/28b7d74f-3488-425b-8a61-6dbeff2f0cb1)
+
+./datasets/ 폴더 생성
+
+데이터셋은 NineWatt/모델학습/Yolo/datasets/together_no_roof.zip 에 위치한다고 가정하겠습니다. 
+
+
+
 
 # YOLO 환경설정 및 간단한 훈련, 테스트 예
 -----------
@@ -16,7 +25,7 @@ https://universe.roboflow.com/rooftop1/-together
 
 + 압축 해제
 
-원본 데이터셋을 압축해제하는 코드입니다. 
+원본 데이터셋을 압축해제하는 코드입니다. 미리 구축되어있으면 생략가능합니다.
 
 ```
 import zipfile
@@ -104,7 +113,7 @@ pip install --upgrade --force-reinstall torch torchvision torchaudio --extra-ind
 # 모델 학습
 # 'data' 파라미터에 커스텀 데이터셋의 경로가 포함된 YAML 파일을 지정
 model.train(
-    data="/home/work/ninewatt/datasets/together_no_roof/data.yaml",  # dataset.yaml 파일 경로
+    data="./datasets/together_no_roof/data.yaml",  # dataset.yaml 파일 경로
     epochs=1000,                     # 훈련 에포크 수
     patience=300,                    # patience 란 오버피팅을 방지하기 위해 validation loss가 더이상 감소하지 않을 경우 학습을 조기 종료 시키는 옵션입니다. YOLO에는 기본적으로 patience가 설정되어 있습니다.
                                       # 현재는 300으로 설정해둬, 300 에폭 동안 validation loss가 더이상 감소하지 않을 경우 학습을 조기 종료시킵니다.
@@ -143,18 +152,32 @@ model.train(
 
 
 ```
-!yolo task=segment mode=val model=/home/work/ninewatt/runs/segment/학습결과저장된폴더/weights/best.pt data=/home/work/ninewatt/datasets/together_no_roof/data.yaml split=test
+!yolo task=segment mode=val model=./runs/segment/학습결과저장된폴더/weights/best.pt data=./datasets/together_no_roof/data.yaml split=test
 ```
 
+
+(결과 이미지 예시입니다.)
 ![image](https://github.com/user-attachments/assets/cc4532d0-e40f-492c-b918-783949841988)
 
   테스트 완료시 위와 같은 수치들과 함께 runs/segment/val 폴더에 테스트 결과가 저장됩니다. mode=val 고정이어서 val로 폴더명이 잡히는 것이니, 테스트 데이터 결과로 보시면 됩니다.
 
 ## 예측 코드 및 정답 비교 코드 예시
-  **예측 코드** simple_predict.py 는 훈련된 가중치 모델을 갖고 이미지 객체 탐지를 하는 간단한 예입니다.
+  **예측 코드 - simple_predict.py** 
+
+simple_predict.py 는 훈련된 가중치 모델을 갖고 이미지 객체 탐지를 하는 간단한 예입니다.
 
 save=True 옵션을 통해 예측 결과를 저장할 수 있습니다.
 
-  **정답 비교 코드**  Test_and_show.py에는 테스트 데이터셋의 ground_truth 레이블(정답 레이블) 과 실제 모델이 예측한 레이블의 차이를 시각화하는 코드가 있습니다. 
+  **정답 비교 코드 - Test_and_show.py**  
+
+이번에는 test와 더불어 plt을 활용한 시각화 예입니다.
+
+앞선 mode=val을 통한 테스팅 코드가 정량적인 평가라면
+
+이 코드는 정성적인 평가를 위해 직접 시각화 하는 코드라고 보시면 됩니다.
+  
+Test_and_show.py에는 테스트 데이터셋의 ground_truth 레이블(정답 레이블) 과 실제 모델이 예측한 레이블의 차이를 시각화하는 코드가 있습니다. 
 
 원본 이미지, 정답 레이블, 예측 레이블, 흑백 바이너리 이미지 순입니다. label_colors 에 클래스별 색상 매핑을 하면 라벨별로 색상을 지정해 줄 수 있습니다.
+
+

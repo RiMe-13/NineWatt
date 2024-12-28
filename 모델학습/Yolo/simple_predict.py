@@ -11,10 +11,10 @@ from ultralytics import YOLO
 # source_path 에는 test 데이터셋의 이미지 경로를
 # label_path에는 test데이터셋의 레이블(ground truth) 경로를 지정해줍니다. 
 
-model_path = "/home/work/choiminsung/runs/segment/model_no_roof_yolo_segmentation3/weights/best.pt"
-data_path = "/home/work/choiminsung/datasets/together_no_roof/data.yaml"
-source_path = "/home/work/choiminsung/datasets/together_no_roof/test/images"
-label_path = "/home/work/choiminsung/datasets/together_no_roof/test/labels"  # 정답 레이블 경로
+model_path = "./runs/segment/model_no_roof_yolo_segmentation3/weights/best.pt"
+data_path = "./datasets/together_no_roof/data.yaml"
+source_path = "./datasets/together_no_roof/test/images"
+label_path = "./datasets/together_no_roof/test/labels"  # 정답 레이블 경로
 
 
 # YOLO 모델 로드
