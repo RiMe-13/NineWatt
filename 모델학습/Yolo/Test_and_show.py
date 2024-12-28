@@ -10,10 +10,10 @@ import matplotlib.pyplot as plt
 from ultralytics import YOLO
 
 # 모델 경로 및 설정
-model_path = "/home/work/choiminsung/runs/segment/model_no_roof_yolo_segmentation3/weights/best.pt"
-data_path = "/home/work/choiminsung/datasets/together_no_roof/data.yaml"
-source_path = "/home/work/choiminsung/datasets/together_no_roof/test/images"
-label_path = "/home/work/choiminsung/datasets/together_no_roof/test/labels"  # 정답 레이블 경로
+model_path = "./runs/segment/model_no_roof_yolo_segmentation3/weights/best.pt"
+data_path = "./datasets/together_no_roof/data.yaml"
+source_path = "./datasets/together_no_roof/test/images"
+label_path = "./datasets/together_no_roof/test/labels"  # 정답 레이블 경로
 
 # YOLO 모델 로드
 model = YOLO(model_path)
