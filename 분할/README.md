@@ -17,6 +17,7 @@ SAM은 분할 결과로 한 이미지당 세가지 분할 이미지를 줍니다
 ## 환경설정
 
 SAM install을 진행합니다.
+
 ```
 !는 사용 환경에따라 빼시면 됩니다. 
 !pip install torch torchvision torchaudio
@@ -32,6 +33,7 @@ vit_h 모델 가중치가 가장 무겁고 정확도가 높은 것으로 알려�
 ```
 !wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_l_0b3195.pth
 ```
+sample_folder 라는 폴더를 생성합니다. 전처리된 이미지와 경계 박스 이미지들을 넣어둡니다. 
 
 ## segmentation.py 설명
 
