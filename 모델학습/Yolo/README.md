@@ -4,9 +4,19 @@
 
 현 폴더에서는 데모 버전과는 별도로 초기 환경 설정에서부터 훈련 및 테스트와 관련하여 설명합니다.
 
-데이터셋은 NineWatt/모델학습/Yolo/datasets/together_no_roof.zip 을 예로 들겠습니다. 
-
 데이터셋 구축시 Roboflow를 통해서 데이터셋을 쉽게 구축할 수 있습니다. - 예 https://universe.roboflow.com/rooftop1/-together
+
+위 링크를 통해 다운 받을 수 있습니다.
+![image](https://github.com/user-attachments/assets/c854c6eb-b3ad-400f-957e-5b026ec27477)
+
+YOLOv8 선택 -> .zip 파일 다운
+![image](https://github.com/user-attachments/assets/28b7d74f-3488-425b-8a61-6dbeff2f0cb1)
+
+./datasets/ 폴더 생성
+
+데이터셋은 NineWatt/모델학습/Yolo/datasets/together_no_roof.zip 에 위치한다고 가정하겠습니다. 
+
+
 
 
 # YOLO 환경설정 및 간단한 훈련, 테스트 예
